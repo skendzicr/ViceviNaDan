@@ -2,11 +2,9 @@ package net.indjija.skendza.vicnadan;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -17,8 +15,6 @@ public class glavnaActivity extends ActionBarActivity {
 
     TextView vicTextview;
     Button dugme;
-    String pitanjce;
-    String odgovor;
     int brojKlikova = 1;
 
 
@@ -30,19 +26,12 @@ public class glavnaActivity extends ActionBarActivity {
         ArrayList<Vic> nekiVicevi = zbirkaViceva.JSONZbirkaViceva();
         final vicBot Botinjo = new vicBot(nekiVicevi);
 
-
-
-
         vicTextview = (TextView) findViewById(R.id.vicView);
-
 
         dugme = (Button) findViewById(R.id.dugme);
         dugme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
 
                 if (brojKlikova % 2 != 0)
                 {
