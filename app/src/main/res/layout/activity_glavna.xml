@@ -3,18 +3,27 @@
     android:layout_height="match_parent" tools:context=".glavnaActivity">
 
     <TextView
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:id="@+id/vicView" />
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-thin"
+        android:id="@+id/vicView"
+        android:layout_above="@+id/dugme"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/round_button"
         android:text="@string/upitnik"
+        android:textSize="40sp"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#FFF"
         android:id="@+id/dugme"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/vicView"
-        android:layout_toEndOf="@+id/vicView" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
