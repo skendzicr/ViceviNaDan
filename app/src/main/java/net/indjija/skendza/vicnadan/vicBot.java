@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by skendza on 23.12.2014.
  */
-public class vicBot {
+public class vicBot extends bot{
 
     public ArrayList<Vic> viceviKojeZnam = null;
     public String pitanje;
@@ -24,13 +24,12 @@ public class vicBot {
 
         namestiVic(mojVic);
 
-
     }
 
-    public void namestiVic(Vic vic)
+    protected void namestiVic(Vic vic)
     {
-       pitanje = vic.getVicPitanje();
-       odgovor = vic.getVicOdgovor();
+      pitanje = pricaj(vic.getVicPitanje());
+      odgovor = pricaj(vic.getVicOdgovor());
     }
 
 

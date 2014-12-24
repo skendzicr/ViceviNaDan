@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ public class glavnaActivity extends ActionBarActivity {
     TextView vicTextview;
     Button dugme;
     String pitanjce;
+    String odgovor;
     int brojKlikova = 1;
 
 
@@ -26,14 +28,12 @@ public class glavnaActivity extends ActionBarActivity {
         setContentView(R.layout.activity_glavna);
 
         ArrayList<Vic> nekiVicevi = zbirkaViceva.JSONZbirkaViceva();
-        vicBot jokeBot = new vicBot(nekiVicevi);
+        final vicBot Botinjo = new vicBot(nekiVicevi);
 
-        //jokeBot.namestiVic();
 
 
 
         vicTextview = (TextView) findViewById(R.id.vicView);
-
 
 
         dugme = (Button) findViewById(R.id.dugme);
@@ -42,12 +42,15 @@ public class glavnaActivity extends ActionBarActivity {
             public void onClick(View v) {
 
 
+
+
                 if (brojKlikova % 2 != 0)
                 {
-                    vicTextview.setText(pitanjce);
+                    Botinjo.izaberiVic();
+                    vicTextview.setText(Botinjo.pitanje);
                 }else
                 {
-                    vicTextview.setText("Zato što im je Bog vratio vreme koje izgube na parkiralištu!");
+                    vicTextview.setText(Botinjo.odgovor);
 
                 }
 

@@ -20,7 +20,7 @@ public class zbirkaViceva {
         zbirkaViceva.add(new Vic("Zašto plavuša nosi naočare na stomaku ?",
                 "Jer ima slepo crevo!"));
         zbirkaViceva.add(new Vic("Šta rade pilići kad uđu u kafanu? ",
-                "Zato što im je Bog vratio vrijeme koje izgube na parkiralištu!"));
+                "Piju piju pijuuuu!"));
         zbirkaViceva.add(new Vic( "Zašto u našem Telekomu nema seks afera? ",
                 "Zato što je incest zabranjen."));
         zbirkaViceva.add(new Vic("Koja je razlika između 'Juga 45' i Jehovinog svedoka? ?",
