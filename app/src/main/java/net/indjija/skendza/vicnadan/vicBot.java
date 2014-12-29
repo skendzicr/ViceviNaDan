@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by skendza on 23.12.2014.
  */
-public class vicBot extends bot{
+public class vicBot implements staReci{
 
     public ArrayList<Vic> viceviKojeZnam = null;
     public String pitanje;
@@ -33,6 +33,8 @@ public class vicBot extends bot{
     }
 
 
-
-
+    @Override
+    public String pricaj(String deoVica) {
+        return deoVica;
+    }
 }
